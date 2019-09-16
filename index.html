@@ -14,32 +14,48 @@
 
 <script>
 let placesToVisit = ['Chicago', 'Seattle', 'Boston', 'Miami', 'Philadelphia'];
-let length = placesToVisit.length;
-let i;
 
-for (i = 0; i < length; i++) {
+
+for (i = 0; i < placesToVisit.length; i++) {
   document.write(`Place to visit ${placesToVisit[i]} <br/>`);
 }
 
+//Opgave 4 uden en funktion (popper op ved load)
+/*
+placesToVisit.push(prompt('Enter an American city'));
+document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+*/
+
+//Opgave 4 i en funktion men den tilføjer ikke en by i rækkefølgen
 function addCity() {
-  let city = placesToVisit.push(prompt('Enter an American city'));
-  city = city + placesToVisit[i];
-  document.write(`Place to visit ${city[i]} <br/>`);
+  placesToVisit.push(prompt('Enter an American city'));
+
+  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+
 }
 
+//Opgave 5
+function outputArray(placesToVisit) {
+  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+}
 
+outputArray(placesToVisit);
+
+//Opave 8 Splice
+/*
 function mySplice() {
   placesToVisit.splice(0,2);
   document.write(`Place to visit ${placesToVisit[i]} <br/>`);
 }
 
+//Opgave 10 sort the array in alphabetically order
 function mySort() {
   placesToVisit.sort();
   document.write(`Place to visit ${placesToVisit[i]} <br/>`);
 }
 
 
-
+*/
 </script>
 
 </body>
