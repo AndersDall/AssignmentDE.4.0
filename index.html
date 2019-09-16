@@ -13,8 +13,11 @@
 <button onclick="mySort()">Sort</button> <br/>
 
 <script>
-let placesToVisit = ['Chicago', 'Seattle', 'Boston', 'Miami', 'Philadelphia'];
+let placesToVisit = ['Chicago', ' Seattle', ' Boston', ' Miami', ' Philadelphia'];
 
+
+// Opgave 2 - der er 2 måder at få den ind i HTML
+document.getElementById("demo").innerHTML = placesToVisit;
 
 for (i = 0; i < placesToVisit.length; i++) {
   document.write(`Place to visit ${placesToVisit[i]} <br/>`);
@@ -26,28 +29,48 @@ placesToVisit.push(prompt('Enter an American city'));
 document.write(`Place to visit ${placesToVisit[i]} <br/>`);
 */
 
+//Opgave 4 tilføjer automatisk en by
+placesToVisit.push('New York');
+document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+
 //Opgave 4 i en funktion men den tilføjer ikke en by i rækkefølgen
 function addCity() {
   placesToVisit.push(prompt('Enter an American city'));
-
-  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+  document.getElementById("demo").innerHTML = placesToVisit;
 
 }
+
 
 //Opgave 5
 function outputArray(placesToVisit) {
-  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+  for (i = 0; i < placesToVisit.length; i++) {
+    document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+}
 }
 
-outputArray(placesToVisit);
+
+
+
 
 //Opave 8 Splice
 /*
 function mySplice() {
+  placesToVisit.splice(0, 2);
+  document.write(`Place to visit ${placesToVisit.splice(0,2)} <br/>`);
+}
+*/
+function mySplice() {
   placesToVisit.splice(0,2);
-  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+  document.getElementById("demo").innerHTML = placesToVisit;
 }
 
+//Opgave 10
+function mySort() {
+  placesToVisit.sort();
+  document.getElementById("demo").innerHTML = placesToVisit;
+}
+
+/*
 //Opgave 10 sort the array in alphabetically order
 function mySort() {
   placesToVisit.sort();
