@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<h1>JavaScript arrays assignment DE.4.0</h1>
+<p id="demo"></p>
+
+<button onclick="addCity()">Tilføj by</button> <br/>
+<button onclick="mySplice()">Splice</button> <br/>
+<button onclick="mySort()">Sort</button> <br/>
+
+<script>
+let placesToVisit = ['Chicago', 'Seattle', 'Boston', 'Miami', 'Philadelphia'];
+let length = placesToVisit.length;
+let i;
+
+for (i = 0; i < length; i++) {
+  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+}
+
+function addCity() {
+  let city = placesToVisit.push(prompt('Enter an American city'));
+  city = city + placesToVisit[i];
+  document.write(`Place to visit ${city[i]} <br/>`);
+}
+
+
+function mySplice() {
+  placesToVisit.splice(0,2);
+  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+}
+
+function mySort() {
+  placesToVisit.sort();
+  document.write(`Place to visit ${placesToVisit[i]} <br/>`);
+}
+
+
+
+</script>
+
+</body>
+</html>
